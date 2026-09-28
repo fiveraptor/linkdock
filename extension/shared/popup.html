@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LinkDock</title><link rel="stylesheet" href="style.css"></head>
+<body class="popup">
+  <header><div class="brand"><img src="icons/48.png" width="25" height="25" alt=""><strong>LinkDock</strong></div><button id="settings" class="icon" title="Einstellungen" aria-label="Einstellungen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg></button></header>
+  <main>
+    <section id="welcome" class="notice" hidden><h2>Willkommen an Bord.</h2><p>Verbinde deinen LinkDock-Server, um deine Favoriten hier zu sammeln.</p><button id="connect" class="primary">Server verbinden</button></section>
+    <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Favoriten durchsuchen …" aria-label="Favoriten durchsuchen"></div>
+    <div class="toolbar"><button id="save-page" class="primary"><span>+</span> Diese Seite speichern</button><button id="add" aria-label="Neuen Link oder Ordner anlegen" aria-haspopup="menu" title="Link oder Ordner anlegen">+</button></div>
+    <nav id="breadcrumbs" aria-label="Ordnerpfad"></nav>
+    <div id="list" class="list"></div>
+    <p id="message" class="message" role="status"></p>
+  </main>
+  <footer><div><span id="status-dot" class="dot"></span><span id="status">Laden …</span></div><button id="sync" class="text-button">Abgleichen ↻</button></footer>
+  <dialog id="editor"><form id="edit-form"><h2 id="editor-title">Favorit</h2><label>Name<input id="item-title" maxlength="1000" required></label><label id="url-field">Adresse<input id="item-url" type="url" maxlength="8192" placeholder="https://"></label><label>Ordner<select id="item-parent"></select></label><div class="dialog-actions"><button id="cancel" type="button">Abbrechen</button><button type="submit" class="primary">Speichern</button></div><p id="editor-error" class="message" role="alert"></p></form></dialog>
+  <div id="add-menu" class="menu" popover role="menu" aria-label="Neu anlegen"><button id="new-folder" role="menuitem">Neuer Ordner</button><button id="new-link" role="menuitem">Neuer Link</button></div>
+  <div id="item-menu" class="menu" popover role="menu" aria-label="Eintrag verwalten"></div>
+  <dialog id="delete-dialog" aria-labelledby="delete-title" aria-describedby="delete-description"><form id="delete-form"><h2 id="delete-title">Favorit löschen</h2><p id="delete-description"></p><div class="dialog-actions"><button id="delete-cancel" type="button" autofocus>Abbrechen</button><button id="delete-confirm" type="submit" class="danger">Löschen</button></div><p id="delete-error" class="message" role="alert"></p></form></dialog>
+  <script type="module" src="popup.js"></script>
+</body></html>

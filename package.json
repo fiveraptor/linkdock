@@ -1,0 +1,17 @@
+{
+  "name": "linkdock",
+  "version": "0.4.2",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "description": "Self-hosted bookmark synchronization for Chrome and Safari",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs",
+    "check:public": "node scripts/check-public.mjs",
+    "package": "node scripts/package.mjs"
+  }
+}

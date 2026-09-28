@@ -1,0 +1,30 @@
+# Generated builds and local development
+/dist/
+/local/
+/node_modules/
+.DS_Store
+*.log
+coverage/
+# Runtime configuration and user data
+.env
+.env.*
+!.env.example
+linkdock.env
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+backups/
+linkdock-*-sicherung*.json
+linkdock-????-??-??.json
+# Apple development identities and user-specific project data
+*.pem
+*.key
+*.p12
+*.p8
+*.cer
+*.mobileprovision
+*.provisionprofile
+xcuserdata/
+*.xcuserstate
+DerivedData/
